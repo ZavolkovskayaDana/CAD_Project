@@ -1,0 +1,326 @@
+
+/* =========================================
+   1. ОСНОВНОЙ СТИЛЬ ПРИЛОЖЕНИЯ
+   ========================================= */
+
+QMainWindow {
+    background-color: #F3F6FA;
+    color: #1E293B;
+    font-family: "Segoe UI";
+    font-size: 10pt;
+}
+
+QWidget {
+    color: #1E293B;
+    font-family: "Segoe UI";
+    font-size: 10pt;
+}
+
+
+/* =========================================
+   ВЕРХНЯЯ ПАНЕЛЬ МЕНЮ
+   ========================================= */
+
+QWidget#topBar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DCE3ED;
+}
+
+/* Кнопки File и Edit внутри верхней панели */
+QWidget#topBar QToolButton {
+    background-color: transparent;
+    color: #334155;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 7px 14px;
+}
+
+QWidget#topBar QToolButton:hover {
+    background-color: #F1F5F9;
+    border-color: #E2E8F0;
+}
+
+QWidget#topBar QToolButton:pressed {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+}
+
+QWidget#topBar QToolButton:checked {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+    border: 1px solid #BFDBFE;
+}
+
+
+
+/* =========================================
+   2. ПАНЕЛИ И КОНТЕЙНЕРЫ
+   ========================================= */
+
+QWidget#centralwidget {
+    background-color: #F3F6FA;
+}
+
+QTabWidget::pane {
+    background-color: #FFFFFF;
+    border: 1px solid #DCE3ED;
+    border-radius: 8px;
+    top: -1px;
+}
+
+QTabWidget::tab-bar {
+    left: 4px;
+}
+
+QTabBar::tab {
+    background-color: #E9EEF5;
+    color: #64748B;
+    border: 1px solid #DCE3ED;
+    padding: 9px 12px;
+    margin-right: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+QTabBar::tab:selected {
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border-bottom-color: #FFFFFF;
+    font-weight: bold;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #F8FAFC;
+    color: #1D4ED8;
+}
+
+
+/* =========================================
+   3. КНОПКИ
+   ========================================= */
+
+QPushButton {
+    background-color: #E8EFFA;
+    color: #1D4ED8;
+    border: 1px solid #C7D7F2;
+    border-radius: 6px;
+    padding: 7px 12px;
+}
+
+QPushButton:hover {
+    background-color: #D8E6FA;
+    border-color: #93B4EC;
+}
+
+QPushButton:pressed {
+    background-color: #C5D9F7;
+}
+
+QPushButton:disabled {
+    background-color: #F1F5F9;
+    color: #94A3B8;
+    border-color: #E2E8F0;
+}
+
+
+/* =========================================
+   4. ВЕРХНЯЯ ПАНЕЛЬ ИНСТРУМЕНТОВ
+   ========================================= */
+
+QToolButton {
+    background-color: transparent;
+    color: #334155;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 7px 12px;
+}
+
+QToolButton:hover {
+    background-color: #E2EAF5;
+    border-color: #D5DFEC;
+}
+
+QToolButton:pressed {
+    background-color: #D5E3F6;
+}
+
+QToolButton:checked {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+    border: 1px solid #93C5FD;
+}
+
+
+/* =========================================
+   5. ПОЛЯ ВВОДА
+   ========================================= */
+
+QLineEdit,
+QSpinBox,
+QDoubleSpinBox,
+QComboBox {
+    background-color: #FFFFFF;
+    color: #1E293B;
+    border: 1px solid #CBD5E1;
+    border-radius: 5px;
+    padding: 6px 8px;
+    selection-background-color: #2563EB;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus,
+QSpinBox:focus,
+QDoubleSpinBox:focus,
+QComboBox:focus {
+    border: 1px solid #3B82F6;
+}
+
+QLineEdit:disabled,
+QSpinBox:disabled,
+QComboBox:disabled {
+    background-color: #F1F5F9;
+    color: #94A3B8;
+}
+
+
+/* =========================================
+   6. ВЫПАДАЮЩИЕ СПИСКИ
+   ========================================= */
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 24px;
+    border-left: 1px solid #E2E8F0;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #1E293B;
+    border: 1px solid #CBD5E1;
+    selection-background-color: #DBEAFE;
+    selection-color: #1D4ED8;
+    outline: 0;
+}
+
+
+/* =========================================
+   7. ПОДПИСИ И ТЕКСТ
+   ========================================= */
+
+QLabel {
+    background-color: transparent;
+    color: #475569;
+}
+
+QLabel:disabled {
+    color: #94A3B8;
+}
+
+
+/* =========================================
+   8. МЕНЮ
+   ========================================= */
+
+QMenu {
+    background-color: #FFFFFF;
+    color: #1E293B;
+    border: 1px solid #DCE3ED;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 7px 24px 7px 12px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #E2E8F0;
+    margin: 4px 8px;
+}
+
+
+/* =========================================
+   9. ОКНА СООБЩЕНИЙ
+   ========================================= */
+
+QMessageBox {
+    background-color: #FFFFFF;
+}
+
+QMessageBox QLabel {
+    color: #1E293B;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+}
+
+
+/* =========================================
+   10. ПОЛЗУНКИ ПРОКРУТКИ
+   ========================================= */
+
+QScrollBar:vertical {
+    background-color: #F1F5F9;
+    width: 10px;
+    margin: 0;
+    border: none;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #CBD5E1;
+    min-height: 24px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #94A3B8;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background-color: #F1F5F9;
+    height: 10px;
+    margin: 0;
+    border: none;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #CBD5E1;
+    min-width: 24px;
+    border-radius: 4px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+QScrollBar::sub-page,
+QScrollBar::add-page {
+    background: transparent;
+}
+
+
+/* =========================================
+   11. ПОДСКАЗКИ
+   ========================================= */
+
+QToolTip {
+    background-color: #1E293B;
+    color: #FFFFFF;
+    border: 1px solid #334155;
+    padding: 5px 8px;
+    border-radius: 4px;
+}

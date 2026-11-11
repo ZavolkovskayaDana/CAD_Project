@@ -1,0 +1,26 @@
+
+# Виртуальное окружение Python
+venv/
+.venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Файлы тестирования и покрытия
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Настройки и временные файлы IDE
+.idea/
+.vscode/
+
+# Системные файлы Windows
+Thumbs.db
+Desktop.ini
+
+# Временные файлы
+*.log
