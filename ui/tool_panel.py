@@ -42,6 +42,9 @@ class ToolPanel(QFrame):
         self.create_tool_button(
             layout, "delete", "Удалить"
         )
+        print("Состояние кнопок:")
+        for name, button in self.buttons.items():
+            print(name, button.isChecked())
 
         # Оставшееся место занимает пустое пространство.
         layout.addStretch()
@@ -121,3 +124,12 @@ class ToolPanel(QFrame):
                 tool_button.setChecked(False)
 
             self.button_group.setExclusive(True)
+            
+    def get_current_tool(self):
+        """Возвращает название выбранного инструмента."""
+
+        for tool_name, button in self.buttons.items():
+            if button.isChecked():
+                return tool_name
+
+        return None
